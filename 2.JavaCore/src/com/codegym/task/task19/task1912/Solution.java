@@ -1,0 +1,38 @@
+package com.codegym.task.task19.task1912;
+
+/* 
+Reader Wrapper 2
+
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static TestString testString = new TestString();
+
+    public static void main(String[] args) {
+
+        PrintStream consoleStream = System.out;
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+        PrintStream stream = new PrintStream(outputStream);
+
+        System.setOut(stream);
+
+        testString.printSomething();
+
+        String result = outputStream.toString();
+
+        System.setOut(consoleStream);
+        String newResult = result.replace("te", "??");
+        System.out.println(newResult);
+
+    }
+
+    public static class TestString {
+        public void printSomething() {
+            System.out.println("This is text for testing");
+        }
+    }
+}
