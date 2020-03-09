@@ -14,7 +14,7 @@ public class Solution {
     }
 
     public static String getObjectType(Object o) {
-        if(o instanceof Cow || o instanceof Dog || o instanceof Whale|| o instanceof Pig)
+        if(o instanceof Cow || o instanceof Dog || o instanceof Whale)
         return o.getClass().getSimpleName();
         else
         return "Unknown Animal";
